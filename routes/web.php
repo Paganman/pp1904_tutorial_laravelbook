@@ -13,6 +13,8 @@
 
 Route::get('/', 'PagesController@home');
 
+Route::get('home', 'PagesController@home');
+
 Route::get('/about', 'PagesController@about');
 
 Route::get('/contact', 'TicketsController@create');
@@ -30,4 +32,8 @@ Route::prefix('tickets')->group(function (){
         Route::post('/delete','TicketsController@destroy');
     });
 });
+
 Route::post('/comment', 'CommentsController@newComment');
+
+Route::get('users/register', 'Auth\RegisterController@showRegistrationForm');
+Route::post('users/register', 'Auth\RegisterController@register');
