@@ -13,6 +13,11 @@ return [
     |
     */
 
-    'head' => 'Learning Laravel 5',
-    'content' => 'Building Practical Applications',
+    'larabook' => 'Larabook',
+    'home' => 'Trang Chủ',
+    'about' => 'Thông Tin',
+    'contact' => 'Liên Hệ',
+    'member' => 'Thành Viên',
+    'register' => 'Đăng Ký',
+    'login' => 'Đăng Nhập',
 ];

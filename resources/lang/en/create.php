@@ -13,6 +13,10 @@ return [
     |
     */
 
-    'head' => 'Learning Laravel 5',
-    'content' => 'Building Practical Applications',
+    'create' => 'Create a ticket',
+    'title' => 'Title',
+    'content' => 'Content',
+    'question' => 'Feel free to ask us any question.',
+    'cancel' => 'Cancel',
+    'submit' => 'Submit',
 ];

@@ -1,4 +1,5 @@
 <?php
+
 return [
 
     /*
@@ -13,6 +14,5 @@ return [
     */
 
     'title' => 'About Page',
-    'head' => 'About Page',
     'quote' => 'Our about page!',
 ];

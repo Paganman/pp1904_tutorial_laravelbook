@@ -13,6 +13,5 @@ return [
     |
     */
 
-    'head' => 'Learning Laravel 5',
-    'content' => 'Building Practical Applications',
+    'update' => 'The ticket :slug has been updated',
 ];

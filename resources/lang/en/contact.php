@@ -1,4 +1,5 @@
 <?php
+
 return [
 
     /*
@@ -13,6 +14,5 @@ return [
     */
 
     'title' => 'Contact Page',
-    'head' => 'Contact Page',
     'quote' => 'Our contact page!',
 ];

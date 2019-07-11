@@ -13,6 +13,6 @@ return [
     |
     */
 
-    'head' => 'Learning Laravel 5',
-    'content' => 'Building Practical Applications',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
 ];
