@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\TicketFormRequest;
 use Illuminate\Http\Request;
 use App\Ticket;
 use Illuminate\Support\Facades\Mail;
+use App\Helpers\helper;
+use App\Http\Requests\TicketFormRequest;
 
 class TicketsController extends Controller
 {
@@ -46,15 +47,13 @@ class TicketsController extends Controller
 
         $ticket = Ticket::createTicket($request, $slug);
 
-        $data = [
+        Helper::sendMailLaravel([
+            'fromEmail' => 'danchinhchu@gmai.com',
+            'toEmail' => 'nhudanmkt@gmail.com',
+            'title' => $request->title,
+            'content' => $request->content,
             'ticket' => $slug,
-        ];
-        
-        Mail::send('email.ticket', $data, function ($message) {
-            $message->from('danchinhchu@gmail.com', 'Learning Laravel');
-
-            $message->to('nhudanmkt@gmail.com')->subject('There is a new ticket!');
-        });
+        ]);
 
         return redirect('/contact')->with('status', 'Your ticket has been created! Its unique id is: '.$slug);
     }
@@ -102,7 +101,7 @@ class TicketsController extends Controller
         $ticket = Ticket::updateTicket($request, $slug);
 
         return redirect(action('TicketsController@edit', $slug))
-            ->with('status', 'The ticket ' . $slug . ' has been updated!');
+            ->with('status', trans('update.update', ['slug' => $slug]));
     }
 
     /**
